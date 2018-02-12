@@ -47,7 +47,8 @@ html, body {
 .main {
     border: solid 1px #dddddd;
     width: 650px;
-    position: absolute;
+    position: relative;
+    float: left;
     
 }
 .format{
@@ -59,11 +60,11 @@ html, body {
 .connect {
     border: solid 01px #cccccc;
     width: 270px;
-    float: right;
-    position: absolute;
-    right: 0;
+    float: left;
+    position: relative;
     text-align: center;
     padding-bottom: 40px;
+    margin-left: 20px;
 }
 .border {
     border-top: solid 2px #dddddd;
@@ -81,12 +82,13 @@ html, body {
     padding-left: 50px;
 }
 .img2 {
-    position: absolute;
-    left: 110px;
+    position: relative;
+    left: 65px;
+    float: left;
 }
 .img3 {
-    position: absolute;
-    right: 50px;
+    position: relative;
+    right: 80px;
 }    
 .p1 {
     top: 78px;
@@ -161,6 +163,11 @@ a {
     text-decoration:none;
     color: #777777;
 }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 a:link {
     color: #777777;
 }
@@ -180,11 +187,13 @@ a:active {
    .connect {
        width: 30%;
        margin-right: 10%;
+       float: left;
    }
    .main {
        width: 45%;
        align-items: center;
        margin-left: 10%;
+       float: left;
    }
    #me {
        width: 95%;
@@ -207,9 +216,50 @@ a:active {
    }
 }
 @media screen and (max-width:768px) {
-    Incomplete;
-}
+    .connect {
+        width: 100%;
+        margin-left: 1%;
+    }
+    .main {
+        width: 100%;
+        margin-left: 1%;
+        margin-bottom: 5%;
+    }
+    #me {
+    width: 45%;
+    height: 1%;
+    padding-bottom: 2%;
+    }
+
+    .img2 {
+        left: 1%;
+    }
+    .img3 {
+        right: 350px;
+    }
+    .project1 {
+        width: 45%;
+    }
 
 @media screen and (max-width:640px) {
-    Incomplete;
+    .connect {
+        width: 100%;
+        margin-left: 1%;
+    }
+    .main {
+        width: 100%;
+        margin-left: 1%;
+        margin-bottom: 5%;
+    }
+    #me {
+    width: 98%;
+    padding-bottom: 2%;
+    }
+
+    .img2 {
+        left: 1%;
+    }
+    .img3 {
+        right: 350px;
+    }
 }
